@@ -1,0 +1,6 @@
+-   id: xcodeproj-sort
+    name: Sort the xcode project file
+    description: This hook sorts your .xcodeproj file
+    entry: xcodeproj-sort
+    language: ruby
+    types: [.pbxproj]
