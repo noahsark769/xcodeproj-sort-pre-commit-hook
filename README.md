@@ -1,7 +1,7 @@
 # xcodeproj-sort-pre-commit-hook
 A pre-commit hook that sorts your xcodeproj file.
 
-<img src="https://i.imgur.com/knSvFpV.png" height="200">
+<img src="https://i.imgur.com/knSvFpV.png" height="500">
 
 ## What is it?
 This repo provides a ready to use [pre-commit](https://pre-commit.com/) hook for automatically sorting your Xcode project. The hook looks for files ending in .pbxproj that have been modified and sorts their project group hierarchy automatically using the [Xcodeproj](https://github.com/CocoaPods/Xcodeproj/) gem. The effect is that the sort leaves your project file modified if it's not sorted, so that pre-commit won't allow the unsorted file to go through.
