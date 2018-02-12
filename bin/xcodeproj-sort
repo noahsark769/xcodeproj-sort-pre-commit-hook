@@ -14,7 +14,7 @@ end.parse!
 
 filename = ARGV.pop
 if filename
-  XcodeprojSort.sort(filename)
+  XcodeprojSort.sort(filename.gsub '.pbxproj', '')
 else
   puts "An xcodeproj filename is required."
 end
