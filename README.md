@@ -26,3 +26,6 @@ pre-commit install
 
 ## Contributing
 I use this in the development of [Trestle](https://appstore.com/trestle), but your mileage might vary. If you notice a bug or have a feature request, please open a github issue or submit a pull request. It's best to open issues first so that work isn't duplicated.
+
+## Development
+After closing the repo, you can run `make install` to build the gem and install locally, after which `xcodeproj-sort` should be in your path.
