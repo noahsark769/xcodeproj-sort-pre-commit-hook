@@ -16,7 +16,7 @@ print ARGV
 filename = ARGV.pop
 print filename
 if filename
-  XcodeprojSort.sort(filename.gsub '.pbxproj', '')
+  XcodeprojSort.sort(filename.gsub! '.pbxproj', '')
 else
   puts "An xcodeproj filename is required."
 end
