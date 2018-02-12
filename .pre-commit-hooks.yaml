@@ -3,4 +3,4 @@
     description: This hook sorts your .xcodeproj file
     entry: xcodeproj-sort
     language: ruby
-    files: '*.pbxproj'
+    files: '.*\.pbxproj'
