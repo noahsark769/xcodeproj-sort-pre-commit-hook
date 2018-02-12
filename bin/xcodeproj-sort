@@ -12,11 +12,9 @@ OptionParser.new do |opts|
   opts.banner = "Usage: xcodeproj-sort [path/to/Project.xcodeproj]"
 end.parse!
 
-print ARGV
 filename = ARGV.pop
-print filename
 if filename
-  XcodeprojSort.sort(filename.gsub! '.pbxproj', '')
+  XcodeprojSort.sort(filename.gsub 'project.pbxproj', '')
 else
   puts "An xcodeproj filename is required."
 end
