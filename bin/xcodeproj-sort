@@ -8,13 +8,24 @@ if $PROGRAM_NAME == __FILE__
   require 'bundler/setup'
 end
 
+xcodeproj_sort_options = nil
 OptionParser.new do |opts|
   opts.banner = "Usage: xcodeproj-sort [path/to/Project.xcodeproj]"
+
+  opts.on(
+    "-p",
+    "--groups-position [above|below]",
+    "Whether to position groups before files (above) or after files (below). Default is to interleave."
+  ) do |p|
+    if p
+      xcodeproj_sort_options = { :groups_position => p.to_sym }
+    end
+  end
 end.parse!
 
 filename = ARGV.pop
 if filename
-  XcodeprojSort.sort(filename.gsub 'project.pbxproj', '')
+  XcodeprojSort.sort(filename.gsub('project.pbxproj', ''), xcodeproj_sort_options)
 else
   puts "An xcodeproj filename is required."
 end
