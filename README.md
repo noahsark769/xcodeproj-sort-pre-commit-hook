@@ -13,10 +13,18 @@ Add the following to your `.pre-commit-config.yaml`:
 
 ```
 -   repo: git://github.com/noahsark769/xcodeproj-sort-pre-commit-hook
-    sha: v1.0.0
+    sha: v1.0.1
     hooks:
     - id: xcodeproj-sort
+      args: [--groups-position=above]
 ```
+
+### Options
+Use the `--groups-position` option to specifiy the position of groups in the sort:
+- `above`: Positions groups above objects in the sort
+- `below`: Positions groups below objects in the sort
+
+The default is to interleave groups and objects in the sort.
 
 Then, run:
 
