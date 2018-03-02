@@ -20,7 +20,7 @@ Add the following to your `.pre-commit-config.yaml`:
 ```
 
 ### Options
-Use the `--groups-position` option to specifiy the position of groups in the sort:
+Use the `--groups-position` option to specify the position of groups in the sort:
 - `above`: Positions groups above objects in the sort
 - `below`: Positions groups below objects in the sort
 
