@@ -19,6 +19,12 @@ Add the following to your `.pre-commit-config.yaml`:
       args: [--groups-position=above]
 ```
 
+Then, run:
+
+```
+pre-commit install
+```
+
 ### Options
 Use the `--groups-position` option to specify the position of groups in the sort:
 - `above`: Positions groups above objects in the sort
@@ -26,10 +32,17 @@ Use the `--groups-position` option to specify the position of groups in the sort
 
 The default is to interleave groups and objects in the sort.
 
-Then, run:
+### Running manually
+The code runs in a rubygem which is build by `pre-commit`. To run a sort manually outside of `pre-commit`, install the gem locally:
 
 ```
-pre-commit install
+gem install xcodeproj-sort
+```
+
+Then, run the gem with the project file as an argument:
+
+```
+xcodeproj-sort MyProject.xcodeproj/project.pbxproj
 ```
 
 ## Contributing
