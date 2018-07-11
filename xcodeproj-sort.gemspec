@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'xcodeproj-sort'
-  s.version     = '1.0.2"
+  s.version     = '1.0.2'
   s.licenses    = ['MIT']
   s.summary     = "Sort your xcodeproj file in a pre-commit hook."
   s.description = %(
