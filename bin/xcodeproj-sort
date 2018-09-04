@@ -23,10 +23,8 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+abort "An xcodeproj filename is required." if ARGV.empty?
+
 while filename = ARGV.pop
-  if filename
-    XcodeprojSort.sort(filename.gsub('project.pbxproj', ''), xcodeproj_sort_options)
-  else
-    puts "An xcodeproj filename is required."
-  end
+  XcodeprojSort.sort(filename.gsub('project.pbxproj', ''), xcodeproj_sort_options)
 end
