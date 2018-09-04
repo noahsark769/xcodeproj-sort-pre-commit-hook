@@ -10,7 +10,7 @@ end
 
 xcodeproj_sort_options = nil
 OptionParser.new do |opts|
-  opts.banner = "Usage: xcodeproj-sort [path/to/Project.xcodeproj]"
+  opts.banner = "Usage: xcodeproj-sort [path/to/Project.xcodeproj] ..."
 
   opts.on(
     "-p",
@@ -23,9 +23,10 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-filename = ARGV.pop
-if filename
-  XcodeprojSort.sort(filename.gsub('project.pbxproj', ''), xcodeproj_sort_options)
-else
-  puts "An xcodeproj filename is required."
+while filename = ARGV.pop
+  if filename
+    XcodeprojSort.sort(filename.gsub('project.pbxproj', ''), xcodeproj_sort_options)
+  else
+    puts "An xcodeproj filename is required."
+  end
 end
