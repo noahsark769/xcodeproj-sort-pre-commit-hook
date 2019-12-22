@@ -13,7 +13,7 @@ Add the following to your `.pre-commit-config.yaml`:
 
 ```
 -   repo: git://github.com/noahsark769/xcodeproj-sort-pre-commit-hook
-    sha: v1.0.4
+    sha: v1.1.0
     hooks:
     - id: xcodeproj-sort
       args: [--groups-position=above]
@@ -33,7 +33,7 @@ Use the `--groups-position` option to specify the position of groups in the sort
 The default is to interleave groups and objects in the sort.
 
 ### Running manually
-The code runs in a rubygem which is build by `pre-commit`. To run a sort manually outside of `pre-commit`, install the gem locally:
+The code runs in a rubygem which is built by `pre-commit`. To run a sort manually outside of `pre-commit`, install the gem locally:
 
 ```
 gem install xcodeproj-sort
