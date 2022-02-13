@@ -13,7 +13,7 @@ Add the following to your `.pre-commit-config.yaml`:
 
 ```
 -   repo: git://github.com/noahsark769/xcodeproj-sort-pre-commit-hook
-    sha: v1.1.0
+    sha: v1.1.1
     hooks:
     - id: xcodeproj-sort
       args: [--groups-position=above]
